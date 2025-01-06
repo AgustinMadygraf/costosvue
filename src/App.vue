@@ -1,20 +1,27 @@
 <!--
 Path: src/App.vue
-Este es el componente principal de la aplicación.
+Este componente se encarga de mostrar el encabezado de la aplicación.
 -->
 
 <template>
-  <NetworkCheck />
+  <div>
+    <AppHeader />
+    <NetworkCheck />
+    <ListadoPrecios />
+  </div>
 </template>
 
 <script>
-import NetworkCheck from './components/NetworkCheck.vue'
+import NetworkCheck from './components/NetworkCheck.vue';
+import AppHeader from './components/AppHeader.vue';
+import ListadoPrecios from './components/ListadoPrecios.vue';
 
 export default {
   name: 'App',
   components: {
-    NetworkCheck
+    NetworkCheck,
+    AppHeader,
+    ListadoPrecios
   }
-}
+};
 </script>
-
